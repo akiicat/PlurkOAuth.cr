@@ -1,6 +1,6 @@
 # plurk
 
-TODO: Write a description here
+A crystal library for Plurk OAuth API
 
 ## Installation
 
@@ -10,12 +10,13 @@ Add this to your application's `shard.yml`:
 dependencies:
   plurk-oauth:
     github: akiicat/PlurkOAuth.cr
+    branch: master
 ```
 
 ## Usage
 
 ```crystal
-require "plurk"
+require "plurk-oauth"
 ```
 
 ## Contributing
