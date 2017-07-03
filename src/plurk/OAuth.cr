@@ -6,12 +6,12 @@ module Plurk
     getter consumer_key : String
     getter consumer_secret : String
     getter oauth_callback : String
-    getter consumer : OAuth::Consumer
+    getter consumer : ::OAuth::Consumer
     property token : String
     property secret : String
 
     def initialize(@consumer_key, @consumer_secret, @oauth_callback = "", token = nil, secret = nil)
-      @consumer = OAuth::Consumer.new("www.plurk.com",
+      @consumer = ::OAuth::Consumer.new("www.plurk.com",
                                       consumer_key,
                                       consumer_secret,
                                       request_token_uri: "/OAuth/request_token",
@@ -39,11 +39,11 @@ module Plurk
     end
 
     private def request_token
-      OAuth::RequestToken.new(@token, @secret)
+      ::OAuth::RequestToken.new(@token, @secret)
     end
 
     private def access_token
-      OAuth::AccessToken.new(@token, @secret)
+      ::OAuth::AccessToken.new(@token, @secret)
     end
   end
 end
