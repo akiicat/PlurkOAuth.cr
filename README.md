@@ -8,8 +8,8 @@ Add this to your application's `shard.yml`:
 
 ```yaml
 dependencies:
-  plurk:
-    github: akiicat/plurk
+  plurk-oauth:
+    github: akiicat/PlurkOAuth.cr
 ```
 
 ## Usage
